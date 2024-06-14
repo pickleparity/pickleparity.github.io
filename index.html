@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickleball Game Rotations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('setup')">Setup</button>
+            <button class="tab-button" onclick="openTab('games')">Games</button>
+        </div>
+        <div id="setup" class="tab-content">
+            <h1>Pickleball Game Rotations</h1>
+            <form id="playerForm">
+                <input type="text" id="playerName" placeholder="Enter player name" required>
+                <button type="submit" id="addCatchUpPlayerButton">Add Catch-up Player</button>
+                <button type="button" id="addRotationPlayerButton">Add Player to Rotation</button>
+            </form>
+            <ul id="playerList"></ul>
+            <div id="totalGames"></div>
+        </div>
+        <div id="games" class="tab-content" style="display:none;">
+            <button id="generateRotation">Next Game</button>
+            <button id="rejectGame" style="display: none;">Reject Game</button>
+            <div id="rotationOutput"></div>
+            <h2>Game History</h2>
+            <div id="gameHistory"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

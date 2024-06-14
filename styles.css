@@ -1,0 +1,190 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Increase max width for larger screens */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Tab styles */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.tab-button.active {
+    background-color: #0056b3;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Player list styles */
+#playerList {
+    list-style: none;
+    padding: 0;
+    max-height: 300px; /* Set a maximum height for the player list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#playerList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#playerList li button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#playerList li button.pause-button {
+    background-color: #dc3545;
+}
+
+#playerList li button:hover {
+    opacity: 0.8;
+}
+
+/* Total games styles */
+#totalGames {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Button styles */
+button#generateRotation, button#rejectGame, button#acceptGame {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button#rejectGame {
+    background-color: #dc3545;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Rotation output styles */
+#rotationOutput {
+    margin-top: 20px;
+}
+
+/* Scrollable game history styles */
+#gameHistory {
+    margin-top: 20px;
+    max-height: 300px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .tab-button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    form input {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    button#generateRotation, button#rejectGame, button#acceptGame {
+        font-size: 14px;
+        padding: 8px 10px;
+        margin: 5px;
+    }
+
+    #playerList, #gameHistory {
+        max-height: 200px; /* Adjust for smaller screens */
+    }
+}
