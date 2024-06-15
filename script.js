@@ -77,6 +77,17 @@ function renderPlayerList() {
     const totalGames = gameHistory.length;
     const totalGamesDiv = document.getElementById('totalGames');
     totalGamesDiv.textContent = `Total Games Played: ${totalGames}`;
+
+    // Show or hide the additional player buttons based on the game history
+    if (gameHistory.length > 0) {
+        document.getElementById('addPlayerButton').style.display = 'none';
+        document.getElementById('addCatchUpPlayerButton').style.display = 'inline-block';
+        document.getElementById('addRotationPlayerButton').style.display = 'inline-block';
+    } else {
+        document.getElementById('addPlayerButton').style.display = 'inline-block';
+        document.getElementById('addCatchUpPlayerButton').style.display = 'none';
+        document.getElementById('addRotationPlayerButton').style.display = 'none';
+    }
 }
 
 function togglePause(name) {

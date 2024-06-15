@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pickleball Game Rotations</title>
+    <title>PickleParity</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,17 +12,18 @@
             <button class="tab-button active" onclick="openTab('setup')">Setup</button>
             <button class="tab-button" onclick="openTab('games')">Games</button>
         </div>
-        <div id="setup" class="tab-content">
-            <h1>Pickleball Game Rotations</h1>
+        <div id="setup" class="tab-content active">
+            <h1>PickleParity</h1>
             <form id="playerForm">
                 <input type="text" id="playerName" placeholder="Enter player name" required>
-                <button type="submit" id="addCatchUpPlayerButton">Add Catch-up Player</button>
-                <button type="button" id="addRotationPlayerButton">Add Player to Rotation</button>
+                <button type="submit" id="addPlayerButton">Add Player</button>
+                <button type="button" id="addCatchUpPlayerButton" style="display: none;">Add Catch-up Player</button>
+                <button type="button" id="addRotationPlayerButton" style="display: none;">Add Player to Rotation</button>
             </form>
             <ul id="playerList"></ul>
             <div id="totalGames"></div>
         </div>
-        <div id="games" class="tab-content" style="display:none;">
+        <div id="games" class="tab-content">
             <button id="generateRotation">Next Game</button>
             <button id="rejectGame" style="display: none;">Reject Game</button>
             <div id="rotationOutput"></div>
