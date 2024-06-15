@@ -66,14 +66,14 @@ form {
 form input {
     flex: 1;
     padding: 10px;
-    font-size: 16px;
+    font-size: 16px; /* Ensure font size is at least 16px */
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
 }
 
 form button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 16px; /* Ensure font size is at least 16px */
     border: none;
     background-color: #007bff;
     color: white;
@@ -177,11 +177,11 @@ button:hover {
     }
 
     form input {
-        font-size: 14px;
+        font-size: 16px; /* Ensure font size is at least 16px */
     }
 
     form button {
-        font-size: 14px;
+        font-size: 16px; /* Ensure font size is at least 16px */
         padding: 8px 10px;
     }
 
