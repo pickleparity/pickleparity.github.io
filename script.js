@@ -7,10 +7,18 @@ document.getElementById('playerForm').addEventListener('submit', function(event)
     }
 });
 
+document.getElementById('addCatchUpPlayerButton').addEventListener('click', function() {
+    const playerName = document.getElementById('playerName').value;
+    if (playerName) {
+        addPlayer(playerName, 0); // Add catch-up player
+        document.getElementById('playerName').value = '';
+    }
+});
+
 document.getElementById('addRotationPlayerButton').addEventListener('click', function() {
     const playerName = document.getElementById('playerName').value;
     if (playerName) {
-        addPlayerToRotation(playerName);
+        addPlayerToRotation(playerName); // Add player to rotation
         document.getElementById('playerName').value = '';
     }
 });
